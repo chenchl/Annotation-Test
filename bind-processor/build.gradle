@@ -1,0 +1,22 @@
+apply plugin: 'java-library'
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+        resources {
+            srcDir 'res'
+        }
+    }
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.squareup:javapoet:1.11.1'
+    implementation'com.google.auto.service:auto-service:1.0-rc6'
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc6'
+    api project(path: ':bind-annotation')
+
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"

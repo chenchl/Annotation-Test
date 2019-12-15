@@ -1,0 +1,2 @@
+include ':app', ':bind-lib', ':bind-processor', ':bind-annotation'
+rootProject.name='Annotation-Test'
